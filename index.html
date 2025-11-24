@@ -12,15 +12,17 @@
 <body> 
     <div class="Weather-app">
     <header>
-        <form class="search-form">
-            <input type="search" placeholder="Enter a City.."required class="search-input"/>
+        <form class="search-form" id="search-form">
+            <input type="search" placeholder="Enter a City.."required 
+            id="search-form-input"
+            class="search-input"/>
             <input type="submit" value="search" class="search-button"/>
         </form>
     </header>
     <main>
         <div class="weather-data">
         <div>
-        <h1 class="Weather-App-city">Polokwane</h1>
+        <h1 class="Weather-App-city" id="city">Polokwane</h1>
         <p class="Weather-App-details">Sunday 08:14, Sunny <br/>
             Precipitation: 10%
 Humidity: <strong>49%</strong>
@@ -47,5 +49,6 @@ Wind: <strong>11 km/h</strong>
             </a>
     </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
