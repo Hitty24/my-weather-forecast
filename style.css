@@ -7,6 +7,9 @@ font-weight: 400;
 font-style: normal;
 font-variation-settings: "wdth" 100;
 }
+a{
+    color: #FF8080;
+}
 .Weather-app{
     background: white;
     max-width: 600px;
@@ -37,3 +40,46 @@ header{
     padding: 15px 30px;
     
 }
+.weather-data {
+    display: flex;
+    justify-content: space-between;
+    
+}
+main{
+    padding: 30px;
+}
+.weather-App-city {
+margin: 0;
+font-size: 38px;
+line-height: 40px;
+
+}
+
+.Weather-App-details{
+    font-size: 16px;
+    color: #f5acac;
+    line-height: 24px;
+    font-weight: 500;
+}
+.Weather-App-details strong{
+    color: #7C53EC;
+}
+.weather-app-tempature-container{
+    display: flex;
+}
+.weather-app-temp{
+    font-size: 85px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.weather-app-icon{
+    font-size: 42px;
+    margin-top: 22px;
+}
+
+.weather-app-unit{
+    margin-top: 16px;
+    font-size: 26px;
+}
+
+
