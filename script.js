@@ -6,14 +6,13 @@ function refreshWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windspeedElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
-  let date = new Date(response.data.time *1000)
+  let date = new Date(response.data.time *1000);
+  let iconElement = document.querySelector("#icon");
 
-
-  console.log(response.data);
+   icon.innerHTML = ` <img src="${response.data.condition.icon_url}"class="weather-app-icon" >`
  
 
-
-  cityElement.innerHTML = response.data.city;
+ cityElement.innerHTML = response.data.city;
 
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
@@ -22,7 +21,6 @@ function refreshWeather(response) {
  temperatureElement.innerHTML = Math.round(temperature);
 
 }
-
 
 function formatDate(date) {
    

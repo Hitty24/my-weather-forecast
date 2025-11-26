@@ -61,25 +61,30 @@ line-height: 40px;
     line-height: 24px;
     font-weight: 500;
 }
+
 .Weather-App-details strong{
     color: #7C53EC;
 }
+
 .weather-app-tempature-container{
     display: flex;
 }
+
 .weather-app-temp{
     font-size: 85px;
-    font-weight: bold;
     margin-left: 10px;
+    line-height: 88px;
 }
+
 .weather-app-icon{
-    font-size: 42px;
-    margin-top: 22px;
+    width: 88px;
+    height: 88px;
 }
 
 .weather-app-unit{
-    margin-top: 16px;
+    margin-top: 6px;
     font-size: 26px;
+
 }
 
 
