@@ -16,6 +16,8 @@ function refreshWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
+  
 }
 
 function formatDate(date) {
@@ -40,8 +42,8 @@ function formatDate(date) {
 }
 
 function searchCity(city) {
-  let apiKey = "b2a5adcct04b33178913oc335f405433";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiKey = "a4aa074904f0be51tc3efdb1bd7f94o1";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(refreshWeather);
 }
 
@@ -52,7 +54,17 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function diaplayForecast() {
+function getForecast(city) {
+  let apiKey = "a4aa074904f0be51tc3efdb1bd7f94o1";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(refreshWeather);
+  
+}
+
+
+
+function displayForecast(response) {
+  
 
 
 
@@ -76,7 +88,7 @@ days.forEach(function (day) {
           </div>
           `;
         });
-        
+
         let forecastElement = document.querySelector("#forecast");
         forecastElement.innerHTML = forecastHtml
 
@@ -87,8 +99,10 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("polokwane");
+displayForecast();
 
-diaplayForecast();
+
+
 
 
 
